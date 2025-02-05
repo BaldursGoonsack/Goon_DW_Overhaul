@@ -1,0 +1,49 @@
+new entry "Goon_ExtraOffhandAttack"
+type "PassiveData"
+// Extra Offhand Attack
+data "DisplayName" "hf0a68b9ag768fg483eg8aecg3662e5dfa027"
+// Can make an additional free offhand attack after making an unarmed or weapon attack. If you gain the Extra Attack feature from more than one class, they don't add together.
+data "Description" "h237c0768g48c0g4778g8902ge0226bf70a1d"
+data "Icon" "PassiveFeature_ExtraAttack"
+data "Properties" "Highlighted"
+data "StatsFunctorContext" "OnCast;OnStatusRemoved;OnStatusApplied"
+data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnCast) and GoonBonusExtraAttackSpellCheck() and HasUseCosts('BonusActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and not HasStatus('SLAYER_PLAYER',context.Source) and not HasStatus('SLAYER_PLAYER_10',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_TECHNICAL') and TurnBased())"
+data "StatsFunctors" "IF((not HasStatus('GOON_EXTRA_OFFHAND_ATTACK_TRACKER', context.Source)) and context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_EXTRA_OFFHAND_ATTACK, 100, 1)"
+
+new entry "GOON_EXTRA_OFFHAND_ATTACK"
+type "StatusData"
+data "StatusType" "BOOST"
+// Extra Offhand Attack
+data "DisplayName" "hf0a68b9ag768fg483eg8aecg3662e5dfa027"
+// Make an additional offhand weapon &lt;LSTag Tooltip="AttackRoll"&gt;attack&lt;/LSTag&gt; this turn.
+data "Description" "h7702fda1g218eg46a8g9ae3g8d692a018218"
+data "Icon" "PassiveFeature_ExtraAttack"
+data "StackId" "GOON_EXTRA_OFFHAND_ATTACK"
+data "StackPriority" "20"
+data "TickType" "StartTurn"
+data "Boosts" "UnlockSpellVariant(GoonBonusExtraAttackCheck(),ModifyUseCosts(Replace,BonusActionPoint,0,0,BonusActionPoint),ModifyIconGlow(),ModifyTooltipDescription())"
+data "RemoveConditions" "GoonBonusExtraAttackSpellCheck() and HasUseCosts('BonusActionPoint',false,context.Target) and not IsMainHandAttack()"
+data "RemoveEvents" "OnSpellCast"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;ApplyToDead"
+data "OnRemoveFunctors" "IF(not RemoveCause(StatusRemoveCause.TimeOut)):ApplyStatus(GOON_EXTRA_OFFHAND_ATTACK_TRACKER, 100, 1)"
+
+// new entry "Goon_Target_ExtraOffhandAttack"
+//type "SpellData"
+//data "SpellType" "Target"
+//using "Target_OffhandAttack"
+//data "Cooldown" "OncePerTurn"
+//data "SpellProperties" "GROUND:DealDamage(OffhandMeleeWeapon, OffhandMeleeWeaponDamageType);GROUND:ExecuteWeaponFunctors(OffHand)"
+//data "TargetConditions" "not Self() and not Dead() and HasStatus('AI_HELPER_EXTRAATTACK',context.Source)"
+// Offhand Attack (Multiattack)
+//data "DisplayName" ""
+//data "UseCosts" ""
+//data "SpellAnimationIntentType" "Aggressive"
+
+new entry "GOON_EXTRA_OFFHAND_ATTACK_TRACKER"
+type "StatusData"
+data "StatusType" "BOOST"
+// %%% Extra Offhand Attack Tracker
+data "DisplayName" "h61fe6cb1g5adcg4ea5ga58cg4cad30a9947c"
+data "StackId" "GOON_EXTRA_OFFHAND_ATTACK_TRACKER"
+data "TickType" "StartTurn"
+data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog;ApplyToDead"

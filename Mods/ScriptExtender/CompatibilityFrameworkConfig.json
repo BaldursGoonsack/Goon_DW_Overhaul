@@ -1,0 +1,84 @@
+{
+  "FileVersion": 1,
+  "Progressions": [
+    {
+      "Comment":"Barbarian level 5",
+			"UUID": "76654cf4-89a5-4255-8e2a-cd4d08df0fe4",
+      "Strings": [
+        {
+          "Action": "Insert",
+          "Type": "PassivesAdded",
+          "Strings": ["Goon_ExtraOffhandAttack"]
+        }
+      ]
+    },
+    {
+      "Comment":"Fighter level 5",
+			"UUID": "3b20daaa-91e3-45ec-ad66-69763bc5ab2d",
+      "Strings": [
+        {
+          "Action": "Insert",
+          "Type": "PassivesAdded",
+          "Strings": ["Goon_ExtraOffhandAttack"]
+        }
+      ]
+    },
+    {
+      "Comment":"Monk level 5",
+			"UUID": "7b354b75-537f-464e-a28d-cafa72323ab9",
+      "Strings": [
+        {
+          "Action": "Insert",
+          "Type": "PassivesAdded",
+          "Strings": ["Goon_ExtraOffhandAttack"]
+        }
+      ]
+    },
+    {
+      "Comment":"Paladin level 5",
+			"UUID": "2f27f50e-4c5b-476b-b034-820301937172",
+      "Strings": [
+        {
+          "Action": "Insert",
+          "Type": "PassivesAdded",
+          "Strings": ["Goon_ExtraOffhandAttack"]
+        }
+      ]
+    },
+    {
+      "Comment":"Ranger level 5",
+			"UUID": "3aac34db-f7d6-4176-9ba2-5e77ecdaf140",
+      "Strings": [
+        {
+          "Action": "Insert",
+          "Type": "PassivesAdded",
+          "Strings": ["Goon_ExtraOffhandAttack"]
+        }
+      ]
+    },
+    {
+      "Comment":"Bard - College of Sword level 6",
+			"UUID": "b5a994cc-e76a-4e55-b2d7-ac8ec665c2f1",
+      "Strings": [
+        {
+          "Action": "Insert",
+          "Type": "PassivesAdded",
+          "Strings": ["Goon_ExtraOffhandAttack"]
+        }
+      ]
+    },
+    {
+      "Comment":"Bard - College of Valour level 6",
+			"UUID": "eb3a178a-03d1-4300-bdaa-129656a5536c",
+      "Strings": [
+        {
+          "Action": "Insert",
+          "Type": "PassivesAdded",
+          "Strings": ["Goon_ExtraOffhandAttack"]
+        }
+      ]
+    },
+    {
+    }
+	]
+}

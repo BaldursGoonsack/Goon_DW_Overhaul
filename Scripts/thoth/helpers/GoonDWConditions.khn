@@ -1,0 +1,7 @@
+function GoonBonusExtraAttackSpellCheck()
+    return HasStringInSpellRoll('WeaponAttack') | HasStringInSpellRoll('UnarmedAttack') | HasStringInSpellRoll('ThrowAttack') | SpellId('Target_CommandersStrike') | SpellId('Target_Bufotoxin_Frog_Summon') | SpellId('Projectile_ArrowOfSmokepowder')
+end
+
+function GoonBonusExtraAttackCheck()
+    return GoonBonusExtraAttackSpellCheck() & HasUseCosts('BonusActionPoint',false)
+end
