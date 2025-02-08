@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="hf0a68b9ag768fg483eg8aecg3662e5dfa027" version="1">Extra Offhand Attack</content>
-	<content contentuid="h237c0768g48c0g4778g8902ge0226bf70a1d" version="1">Can make an additional free melee offhand attack after making an unarmed or weapon attack with your offhand.</content>
+	<content contentuid="h237c0768g48c0g4778g8902ge0226bf70a1d" version="1">You can make an additional free melee offhand &lt;LSTag Tooltip="AttackRoll"&gt;attack&lt;/LSTag&gt; after making an unarmed or weapon attack with your melee offhand, but each subsequent offhand attack induces &lt;LSTag Type="Status" Tooltip="GOON_EXTRA_OFFHAND_ATTACK_STRAIN"&gt;Strained Attacks&lt;/LSTag&gt;.</content>
 	<content contentuid="h7702fda1g218eg46a8g9ae3g8d692a018218" version="1">Make an additional melee offhand weapon &lt;LSTag Tooltip="AttackRoll"&gt;attack&lt;/LSTag&gt; this turn.</content>
 	<content contentuid="h61fe6cb1g5adcg4ea5ga58cg4cad30a9947c" version="1">%%% Extra Offhand Attack Tracker</content>
 	<content contentuid="h2a8e2492g38ecg4670g931fge2a0fd704f84" version="1">Strained Attacks</content>
