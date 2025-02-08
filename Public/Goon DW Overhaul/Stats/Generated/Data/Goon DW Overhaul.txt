@@ -87,10 +87,11 @@ data "StatusGroups" "SG_RemoveOnRespec"
 new entry "GOON_EXTRA_OFFHAND_ATTACK_STRAIN"
 type "StatusData"
 data "StatusType" "BOOST"
-// 
-data "DisplayName" ""
-// Using Frenzied Strike adds a penalty to Attack Rolls every time, stacking so that you miss more often. This adds up until the end of your Frenzy.
-data "Description" ""
+// Strained Attacks
+data "DisplayName" "h2a8e2492g38ecg4670g931fge2a0fd704f84"
+// You attack with rapid succession but your accuracy suffers.
+// Your melee offhand attacks benefit from Extra Attack, but each swing adds a stacking -1 penalty to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;, causing you to miss more often. This adds up until the beginnning of your next turn.
+data "Description" "h42bb790cg016ag418cg8ad2g25ae49b8c1b2"
 data "Icon" "PassiveFeature_DualWielder_PassiveBonuses"
 data "StatusPropertyFlags" "FreezeDuration;MultiplyEffectsByDuration"
 //
