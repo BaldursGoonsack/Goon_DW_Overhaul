@@ -34,7 +34,7 @@ data "Icon" "PassiveFeature_ExtraAttack"
 data "Properties" "IsHidden"
 //
 data "StatsFunctorContext" "OnCast;OnStatusRemoved;OnStatusApplied"
-data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnCast) and GoonBonusExtraAttackSpellCheck() and HasUseCosts('BonusActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and not HasStatus('SLAYER_PLAYER',context.Source) and not HasStatus('SLAYER_PLAYER_10',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_TECHNICAL') and TurnBased())"
+data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnCast) and GoonBonusExtraAttackSpellCheck() and HasUseCosts('BonusActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and not HasStatus('SLAYER_PLAYER',context.Source) and not HasStatus('SLAYER_PLAYER_10',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_TECHNICAL') and TurnBased()) and (IsMeleeAttack())"
 data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_EXTRA_OFFHAND_ATTACK, 100, 1)"
 
 // The actual status providing the extra attack
@@ -66,7 +66,7 @@ type "PassiveData"
 data "Properties" "IsHidden"
 //
 data "StatsFunctorContext" "OnCast"
-data "Conditions" "IsOffHandAttack()"
+data "Conditions" "IsOffHandAttack() and IsMeleeAttack()"
 data "StatsFunctors" "IF(not HasStatus('GOON_EXTRA_OFFHAND_ATTACK')):ApplyStatus(GOON_EXTRA_OFFHAND_ATTACK_TRACKER, 100, 1);ApplyStatus(GOON_EXTRA_OFFHAND_ATTACK_STRAIN, 100, 1)"
 
 // Tracks the use of the toggle and keeps the debuffs applied/applying for the duration
@@ -98,7 +98,7 @@ data "StatusPropertyFlags" "FreezeDuration;MultiplyEffectsByDuration"
 data "StackId" "GOON_EXTRA_OFFHAND_ATTACK_STRAIN"
 data "StackType" "Additive"
 data "Boosts" "RollBonus(Attack,-1)"
-data "BoostConditions" "IsOffHandAttack()"
+data "BoostConditions" "IsOffHandAttack() and IsMeleeAttack()"
 data "RemoveConditions" "not HasStatus('GOON_EXTRA_OFFHAND_ATTACK_TRACKER')"
 data "RemoveEvents" "OnStatusRemoved"
 data "StatusGroups" "SG_RemoveOnRespec"
