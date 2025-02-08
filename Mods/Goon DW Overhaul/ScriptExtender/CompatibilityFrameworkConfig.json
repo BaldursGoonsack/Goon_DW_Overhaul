@@ -8,7 +8,7 @@
         {
           "Action": "Insert",
           "Type": "PassivesAdded",
-          "Strings": ["Goon_ExtraOffhandAttack"]
+          "Strings": ["Goon_Extra_Offhand_Attack_Toggle"]
         }
       ]
     },
@@ -19,7 +19,7 @@
         {
           "Action": "Insert",
           "Type": "PassivesAdded",
-          "Strings": ["Goon_ExtraOffhandAttack"]
+          "Strings": ["Goon_Extra_Offhand_Attack_Toggle"]
         }
       ]
     },
@@ -30,7 +30,7 @@
         {
           "Action": "Insert",
           "Type": "PassivesAdded",
-          "Strings": ["Goon_ExtraOffhandAttack"]
+          "Strings": ["Goon_Extra_Offhand_Attack_Toggle"]
         }
       ]
     },
@@ -41,7 +41,7 @@
         {
           "Action": "Insert",
           "Type": "PassivesAdded",
-          "Strings": ["Goon_ExtraOffhandAttack"]
+          "Strings": ["Goon_Extra_Offhand_Attack_Toggle"]
         }
       ]
     },
@@ -52,7 +52,7 @@
         {
           "Action": "Insert",
           "Type": "PassivesAdded",
-          "Strings": ["Goon_ExtraOffhandAttack"]
+          "Strings": ["Goon_Extra_Offhand_Attack_Toggle"]
         }
       ]
     },
@@ -63,7 +63,7 @@
         {
           "Action": "Insert",
           "Type": "PassivesAdded",
-          "Strings": ["Goon_ExtraOffhandAttack"]
+          "Strings": ["Goon_Extra_Offhand_Attack_Toggle"]
         }
       ]
     },
@@ -74,7 +74,7 @@
         {
           "Action": "Insert",
           "Type": "PassivesAdded",
-          "Strings": ["Goon_ExtraOffhandAttack"]
+          "Strings": ["Goon_Extra_Offhand_Attack_Toggle"]
         }
       ]
     },
